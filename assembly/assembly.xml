@@ -1,0 +1,42 @@
+<assembly>
+<!--    <id>bin</id>-->
+    <id>${project.version}</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.outputDirectory}/</directory>
+            <outputDirectory>./</outputDirectory>
+            <includes>
+                <include>git.properties</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>doc/**</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/src/main/bin</directory>
+            <outputDirectory>/</outputDirectory>
+            <filtered>true</filtered>
+            <fileMode>0755</fileMode>
+            <includes>
+                <include>*.sh</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <dependencySets>
+        <dependencySet>
+            <!--是否把本项目添加到依赖文件夹下-->
+            <outputDirectory>./</outputDirectory>
+            <!--将scope为runtime的依赖包打包-->
+            <scope>runtime</scope>
+        </dependencySet>
+
+    </dependencySets>
+</assembly>
