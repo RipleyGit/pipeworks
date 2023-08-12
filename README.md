@@ -2,7 +2,7 @@
 # 批式Spark任务组件
 
 ## 代码架构
-![Img](./doc/bsfit-spark-cmpt.drawio.png)    
+![Img](./doc/pipeworks-cmpt.drawio.png)    
 ## 数据源介绍
 
 ### 已支持数据接口：
